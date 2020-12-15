@@ -1,7 +1,7 @@
 version: "3"
 services:
   solr1:
-    image: solr:8.5.2
+    image: wachira90/solr:8.5.2
     container_name: solr1
     ports:
       - "8981:8983"
@@ -14,7 +14,7 @@ services:
       - zoo2
 
   solr2:
-    image: solr:8.5.2
+    image: wachira90/solr:8.5.2
     container_name: solr2
     ports:
       - "8982:8983"
@@ -27,7 +27,7 @@ services:
       - zoo2
 
   solr3:
-    image: solr:8.5.2
+    image: wachira90/solr:8.5.2
     container_name: solr3
     ports:
       - "8983:8983"
@@ -43,7 +43,7 @@ services:
 #      - zoo2
 
   zoo1:
-    image: zookeeper:3.6.1
+    image: wachira90/zookeeper:3.6.1
     container_name: zoo1
     restart: always
     hostname: zoo1
@@ -58,7 +58,7 @@ services:
       - solr
 
   zoo2:
-    image: zookeeper:3.6.1
+    image: wachira90/zookeeper:3.6.1
     container_name: zoo2
     restart: always
     hostname: zoo2
